@@ -1,0 +1,110 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Game container */
+.game {
+  background: #1e1e1e;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  width: 320px;
+}
+
+/* Status bar */
+.status {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+/* Reset button */
+.reset-button {
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+  background: #ff6666;
+  transform: scale(1.05);
+}
+
+/* Board styling */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Each cell */
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  border: 2px solid #555;
+  background-color: #222;
+  color: #00d8ff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover & active states */
+.cell:hover:not(:disabled) {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Disabled cells stay fixed */
+.cell:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Different color for O */
+.cell:disabled:contains("O") {
+  color: #ffcc00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+    gap: 6px;
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+  }
+
+  .game {
+    width: 280px;
+    padding: 20px;
+  }
+}
