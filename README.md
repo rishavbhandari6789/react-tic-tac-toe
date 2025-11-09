@@ -51,3 +51,7 @@ This project also demonstrates my ability to create intuitive user experiences w
 Check out my YouTube channel for more React and JavaScript projects:
 [**@mnccracker5421**](https://www.youtube.com/@mnccracker5421)
 
+## 📺 Watch Demo
+
+Watch the demo here
+[**@mnccracker5421**](https://www.youtube.com/watch?v=CFdzQ05gRhs)
